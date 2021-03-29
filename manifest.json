@@ -1,0 +1,58 @@
+/* File: manifest.json
+ * -------------------
+ * A manifest file (like this one) is used to
+ * give Chrome information about your extension.
+ *
+ * You shouldn't need to change anything in this file
+ * unless you're doing extensions.
+ *
+ * For more details, check out the documentation:
+ * https://developer.chrome.com/extensions/manifest
+ */
+
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Biroliro",
+  "version": "0.0.1",
+
+  // Recommended
+  "description": "Dando nome aos bois",
+  "icons": {
+    "16": "icons/Biro-white-16.png",
+    "32": "icons/Biro-white-32.png",
+    "48": "icons/Biro-white-48.png",
+    "64": "icons/Biro-white-64.png",
+    "96": "icons/Biro-white-96.png",
+    "128": "icons/Biro-white-128.png"
+  },
+
+  // Optional
+  "homepage_url": "https://www.brasil.gov.br/",
+
+  // Put any additional permissions your applications needs here.
+  // For a list of possibilities, see
+  // https://developer.chrome.com/extensions/declare_permissions
+  "permissions": [
+    "storage" // Allows access to chrome.storage API
+],
+
+  // Probably will not need to be modified unless you *really*
+  // know what you're doing
+  "browser_action": {
+    "default_icon": "icons/Biro-white-19.png",
+    "default_title": "Nome aos bois",
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "/src/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
