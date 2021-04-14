@@ -1,39 +1,35 @@
-# Dando nome aos bois
+# Dando nome ao boi (aka Rei do Gado)
 
-## Overview
+## Visão geral
 
-It does exactly what you expect. It changes the brazilian president's name with adjectives.
+Faz exatamente aquilo que se espera: muda o nome do atual presidente do Brasil com os adjetivos que a Mariliz (https://twitter.com/marilizpj) compôs sobre ele, mais alguns que merecem estar ali.
 
-## Getting Started
-
-### Download Google Chrome
-Download Google Chrome if you haven't already! You can download the latest version [here](https://www.google.com/chrome/browser/desktop/). For this hackpack, you'll need Chrome Version 40 or newer. In order to figure out which version you have, go to [chrome://version/](chrome://version/) in the Omnibar, and look at the top line. You should see something like
+## Começando
+### Faça o Download do Google Chrome
+Aqui, a última versão. [here](https://www.google.com/chrome/browser/desktop/). Precisa pelo menos da versão 40. Para ver que versão você tem, escreva  [chrome://version/](chrome://version/) no endereço, e olhe a primeira linha. Vai ser algo tipo isso:
 
 ```
 Google Chrome	48.0.2564.109 (Official Build) (64-bit)
 ```
 
-Don't worry if it's not exactly the same. As long as the major number (before the decimal point) is greater than 40, you're set!
+Não precisa ser igual. Só tem que ser maior que 40.
 
-### Load Starter Code
-Chrome usually ships extensions as `.crx` files (similar to `.zip` files), which is great for distribution, but not so great for developing. Instead, we'll tell Chrome to treat the starter code folder as an extension.
+### Carregar extensão.
+O chrome normalmente tem extensões com a `.crz` (é um arquivo zip), que é ótimo para mandar pros outros, e péssimo para mim. Então, vou te mostrar como tratar esse repositório aqui como uma extensão do chrome.
 
-We need to enable Chrome Developer Settings in order to build our chrome extension.
+Primeira coisa é ativar os Ajustes de Desenvolvedor. Para isso:
 
-In order to do this:
+1. Baixe a última versão aqui do lado, em "Releases" - tem um arquivo zip ali. Abra o arquivo, e tem um diretório dentro.
+2. Abra a página de extensões [chrome://extensions](chrome://extensions) no seu browser.
+3. Observe que o tique **Developer mode** no alto, na direita, esteja ativo..
+4. Clique em **Load unpacked extension...** para escolher uma pasta
+5. Escolha a pasta da minha extensão.
 
-1. Navigate to [chrome://extensions](chrome://extensions) in your browser.
-2. Ensure that the **Developer mode** checkbox in the top right-hand corner is checked.
-3. Click **Load unpacked extension...** to pop up a file-selection dialog.
-4. Navigate to the directory in which your extension files live, and select it.
-
-You should now see a screen that looks like the below:
-
+Vai aparecer algo tipo isso aqui:
 <a href="Loading Starter Code"><img src="https://i.imgur.com/qPhFaI0.png" height="500" ></a>
 
+Preste atenção que esteja ativado o modo desenvolvedor (Developer mode) e a extensão também.
 
-Note that the **Developer mode** checkbox is checked, and the extension is enabled.
+Adicionalmente, olhe para o botão "RELOAD".
 
-Additionally, pay close attention to the **Reload** link.
-
-**By default, Chrome will _not_ reload your extension automatically if you update your code. Thus, if you want to test your extension, you _must_ reload the extension before testing. Otherwise, your changes will _not_ be present in the active extension.** Basically, every time you make a change to your code that you want to test live in Chrome, make sure to reload the extension using that **Reload** button.
+Você pode adicionar outros xingamentos ali no arquivo "content.js". 
